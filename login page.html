@@ -7,7 +7,7 @@
     src="https://kit.fontawesome.com/64d58efce2.js"
     crossorigin="anonymous">
   </script>
-  <link rel="stylesheet" href="demo.css" />
+  <link rel="stylesheet" href="flight.css" />
   <title>Sign in & Sign up Form</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -41,6 +41,21 @@
             <a href="https://www.linkedin.com/"target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </form>
+
+        <script>
+function loginUser() {
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  if (user === "admin" && pass === "1234") {
+    localStorage.setItem("isLoggedIn", "true");
+    window.location.href = "main.html";
+  } else {
+    alert("Invalid Login");
+  }
+  return false;
+}
+</script>
 
         <!-- 🔹 SIGN UP FORM (UNCHANGED UI) -->
         <form class="sign-up-form">
@@ -113,6 +128,6 @@
     }
   </script>
 
-  <script src="demo.js"></script>
+  <script src="flight.js"></script>
 </body>
 </html>

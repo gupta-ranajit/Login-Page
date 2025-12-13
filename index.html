@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Reservation</title>
-    <link rel="stylesheet" href="main page.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- 🔐 LOGIN CHECK -->
+<script>
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
+<header>
+  <div class="navbar">
+    <h1>SKYFLICKS</h1>
+    <button onclick="logout()">Logout</button>
+  </div>
+</header>
+
+<h2>Welcome to Flight Reservation Page ✈️</h2>
+
+<script>
+function logout() {
+  localStorage.removeItem("isLoggedIn");
+  window.location.href = "login.html";
+}
+</script>
+
+
     <header>
         <div class="navbar">
             <h1>SKYFLICKS</h1>
