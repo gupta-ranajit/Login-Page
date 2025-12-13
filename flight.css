@@ -127,12 +127,12 @@ form.sign-in-form {
   transition: 0.3s;
 }
 
-.social-icon:hover {
+/*.social-icon:hover {
   color: #4481eb;
   border-color: #4481eb;
-}
+}*/
 .social-icon.facebook:hover {
-  color: #4481eb;
+  color: #165deb;
   border-color: #4481eb;
 }
 
@@ -142,17 +142,32 @@ form.sign-in-form {
 }
 
 .social-icon.google:hover {
-  /*color: #4481eb;
-  border-color: #e0731a;*/
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    padding: 0;
-     border: 2px circle transparent;
-  border-image: linear-gradient(45deg, #4285f4, #ea4335, #fbbc05, #34a853) 1;
-  color: #000;
-/*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);*/ 
+  color: #4481eb;
+  border-color: #0753d8;
 }
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(45deg, #4285f4, #ea4335, #fbbc05, #34a853) border-box;
+
+  border: 2px solid transparent;
+  color: #000;
+}
+
+
+ 
+
 
 .social-icon.linkedin:hover {
   color: #4481eb;
