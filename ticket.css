@@ -1,0 +1,97 @@
+body {
+  background: #eaf4ff;
+  font-family: Arial, sans-serif;
+}
+
+.ticket {
+  width: 800px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+/* Company Name */
+.company {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #1e88e5;
+  letter-spacing: 2px;
+}
+
+/* Watermark */
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: rgba(30,136,229,0.08);
+  font-weight: bold;
+  pointer-events: none;
+}
+
+/* Header */
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.ticket-header h2 {
+  color: #1e88e5;
+}
+
+.status {
+  background: #d0ebff;
+  color: #0b5ed7;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  color: #1565c0;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #cce0ff;
+  padding-bottom: 5px;
+}
+
+/* Rows */
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.row div {
+  width: 32%;
+  font-size: 15px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.download-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+}

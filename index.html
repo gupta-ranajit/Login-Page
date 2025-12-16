@@ -10,28 +10,22 @@
 </head>
 <body>
 
-    <!-- 🔐 LOGIN CHECK -->
-<script>
-  if (localStorage.getItem("isLoggedIn") !== "true") {
-    window.location.href = "login.html";
-  }
-</script>
+   
 
-<header>
-  <div class="navbar">
-    <h1>SKYFLICKS</h1>
-    <button onclick="logout()">Logout</button>
-  </div>
-</header>
+<!--<h1>Welcome to Main Page</h1>-->
+  <button onclick="logout()">Logout</button>
 
-<h2>Welcome to Flight Reservation Page ✈️</h2>
+  <script>
+    // Protect page
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
 
-<script>
-function logout() {
-  localStorage.removeItem("isLoggedIn");
-  window.location.href = "login.html";
-}
-</script>
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "login.html";
+    }
+  </script>
 
 
     <header>
@@ -44,7 +38,10 @@ function logout() {
                 <a  href="#"><i class="fa-solid fa-bus"></i> Buses </a>
                 <a  href="#"><i class="fa-solid fa-taxi"></i> Cabs </a>
             </div>
-            <button class="login-btn" > Log in </button>
+            <button class="login-btn" id="mainLoginBtn">Log in</button>
+<button class="login-btn" id="logoutBtn" style="display:none;">Logout</button>
+
+
         </div>
     </header>
 
@@ -74,20 +71,20 @@ function logout() {
 
                 <div class="location-row">
                     
-                    <input type="text" placeholder="Durgapur">
-                    <input type="text" placeholder="Where To?">
+                    <input type="text"  id="fromCity" placeholder="Durgapur">
+                    <input type="text" id="toCity" placeholder="Where To?">
                 </div>
 
                 <div class="date-row">
                     <div class="date-wrapper">
-                        <input type="date" id="Departure" class="date-field" placeholder="Departure">
+                        <input type="date" id="DepartureDate" class="date-field" placeholder="Departure">
                     </div>
                     <div class="date-wrapper">
-                        <input type="date" id="return" class="date-field" placeholder="Return">
+                        <input type="date" id="returnDate" class="date-field" placeholder="Return">
                     </div>
                 </div>
                 <div class="button-row">
-                    <button class="explore-btn">
+                    <button class="explore-btn" id="searchFlightsBtn">
                     Search-Flights
                 </button> 
 
@@ -211,6 +208,7 @@ function logout() {
 
             
         
-    
+    <script src="index.js"></script>
+
 </body>
 </html>

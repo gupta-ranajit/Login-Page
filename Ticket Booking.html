@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Passenger Details | Flight Booking</title>
+  <link rel="stylesheet" href="Ticket Booking.css">
+</head>
+<body>
+
+  
+    <fieldset>
+  <legend>Selected Flight Details</legend>
+
+  <p><strong>Flight:</strong> <span id="flightInfo"></span></p>
+  <p><strong>Route:</strong> <span id="routeInfo"></span></p>
+  <p><strong>Date:</strong> <span id="dateInfo"></span></p>
+  <p><strong>Time:</strong> <span id="timeInfo"></span></p>
+  <p><strong>Price:</strong> ₹<span id="priceInfo"></span></p>
+</fieldset>
+
+    <div class="selected-flight">
+  <h3>Selected Flight</h3>
+  <!--<p id="flightInfo"></p>-->
+</div>
+
+<div class="container">
+  <h2>Passenger & Booking Details</h2>
+
+  <form id="bookingForm">
+
+    <!-- 1. Mandatory Passenger Details -->
+    <fieldset>
+      <legend>Passenger Information</legend>
+
+      <label>Full Name (as per ID)</label>
+      <input type="text" required>
+
+      <label>Gender</label>
+      <select required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label>Date of Birth</label>
+      <input type="date" required>
+
+      <label>Nationality</label>
+      <input type="text" required>
+
+      <label>ID Proof Type</label>
+      <select required>
+        <option value="">Select</option>
+        <option>Aadhaar</option>
+        <option>Passport</option>
+        <option>Driving License</option>
+      </select>
+
+      <label>ID Proof Number</label>
+      <input type="text" required>
+    </fieldset>
+
+    <!-- 2. Contact Details -->
+    <fieldset>
+      <legend>Contact Details</legend>
+
+      <label>Email Address</label>
+      <input type="email" required>
+
+      <label>Mobile Number</label>
+      <input type="tel" required>
+
+      <label>Alternate Mobile Number</label>
+      <input type="tel">
+
+      <label>Address (Optional)</label>
+      <textarea rows="3"></textarea>
+    </fieldset>
+
+
+    <!-- Trip & Class -->
+    <fieldset>
+      <legend>Trip & Class</legend>
+
+      <label>Trip Type</label>
+      <select id="tripType" required>
+        <option value="One Way">One Way</option>
+        <option value="Round Trip">Round Trip</option>
+      </select>
+
+      <label>Travel Class</label>
+      <select id="travelClass" required>
+        <option value="Economy">Economy</option>
+        <option value="Business">Business</option>
+      </select>
+    </fieldset>
+
+    
+    <!-- 3. Passenger & Seat Info -->
+    <fieldset>
+      <legend>Passenger & Seat Preference</legend>
+
+      <label>Number of Passengers</label>
+      <input type="number" min="1" max="6" required>
+
+      <label>Passenger Type</label>
+      <select required>
+        <option>Adult</option>
+        <option>Child</option>
+        <option>Infant</option>
+      </select>
+
+      <label>Seat Preference</label>
+      <select required>
+        <option>Window</option>
+        <option>Aisle</option>
+        <option>Middle</option>
+      </select>
+    </fieldset>
+
+    <!-- 4. Extra Services -->
+    <fieldset>
+      <legend>Additional Services</legend>
+
+      <label>Extra Baggage</label>
+      <select>
+        <option>No</option>
+        <option>Yes</option>
+      </select>
+
+      <label>Meal Preference</label>
+      <select>
+        <option>Veg</option>
+        <option>Non-Veg</option>
+      </select>
+
+      <label>Special Assistance</label>
+      <select>
+        <option>None</option>
+        <option>Wheelchair</option>
+        <option>Senior Citizen</option>
+      </select>
+    </fieldset>
+
+    <!-- 5. Payment Details -->
+    <fieldset>
+      <legend>Payment Method</legend>
+
+      <label>
+        <input type="radio" name="payment" required> Credit Card
+      </label>
+      <label>
+        <input type="radio" name="payment"> Debit Card
+      </label>
+      <label>
+        <input type="radio" name="payment"> UPI
+      </label>
+      <label>
+        <input type="radio" name="payment"> Net Banking
+      </label>
+    </fieldset>
+
+    <button type="submit">Confirm Booking</button>
+  </form>
+
+</div>
+
+<script src="Ticket Booking.js"></script>
+</body>
+</html>

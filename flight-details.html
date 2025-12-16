@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Available Flights</title>
+  <link rel="stylesheet" href="flight-details.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>Flight Availability</h1>
+  <p>Check available flights with date, time and price</p>
+</header>
+
+<section class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Flight No</th>
+        <th>Airline</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Departure Date</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Duration</th>
+        <th>Ticket Price (₹)</th>
+      </tr>
+    </thead>
+
+    <tbody id="flightTable">
+
+<tr class="flight-row" data-flight="AI101" data-airline="Air India" data-from="Delhi" data-to="Mumbai" data-date="20-Oct-2025" data-time="06:00" data-price="5200">
+  <td>AI101</td><td>Air India</td><td>Delhi</td><td>Mumbai</td><td>20-Oct-2025</td><td>06:00</td><td>08:10</td><td>2h 10m</td><td>5,200</td>
+</tr>
+
+<tr class="flight-row" data-flight="6E203" data-airline="IndiGo" data-from="Mumbai" data-to="Bangalore" data-date="20-Oct-2025" data-time="07:15" data-price="4800">
+  <td>6E203</td><td>IndiGo</td><td>Mumbai</td><td>Bangalore</td><td>20-Oct-2025</td><td>07:15</td><td>08:50</td><td>1h 35m</td><td>4,800</td>
+</tr>
+
+<tr class="flight-row" data-flight="UK305" data-airline="Vistara" data-from="Delhi" data-to="Kolkata" data-date="20-Oct-2025" data-time="09:30" data-price="6200">
+  <td>UK305</td><td>Vistara</td><td>Delhi</td><td>Kolkata</td><td>20-Oct-2025</td><td>09:30</td><td>11:45</td><td>2h 15m</td><td>6,200</td>
+</tr>
+
+<tr class="flight-row" data-flight="SG411" data-airline="SpiceJet" data-from="Chennai" data-to="Hyderabad" data-date="20-Oct-2025" data-time="10:00" data-price="3900">
+  <td>SG411</td><td>SpiceJet</td><td>Chennai</td><td>Hyderabad</td><td>20-Oct-2025</td><td>10:00</td><td>11:20</td><td>1h 20m</td><td>3,900</td>
+</tr>
+
+<tr class="flight-row" data-flight="G8245" data-airline="Go First" data-from="Pune" data-to="Delhi" data-date="20-Oct-2025" data-time="11:45" data-price="5600">
+  <td>G8245</td><td>Go First</td><td>Pune</td><td>Delhi</td><td>20-Oct-2025</td><td>11:45</td><td>14:00</td><td>2h 15m</td><td>5,600</td>
+</tr>
+
+<tr class="flight-row" data-flight="AI202" data-airline="Air India" data-from="Mumbai" data-to="Jaipur" data-date="20-Oct-2025" data-time="13:30" data-price="4700">
+  <td>AI202</td><td>Air India</td><td>Mumbai</td><td>Jaipur</td><td>20-Oct-2025</td><td>13:30</td><td>15:00</td><td>1h 30m</td><td>4,700</td>
+</tr>
+
+<tr class="flight-row" data-flight="6E317" data-airline="IndiGo" data-from="Kolkata" data-to="Bangalore" data-date="20-Oct-2025" data-time="14:15" data-price="6800">
+  <td>6E317</td><td>IndiGo</td><td>Kolkata</td><td>Bangalore</td><td>20-Oct-2025</td><td>14:15</td><td>16:50</td><td>2h 35m</td><td>6,800</td>
+</tr>
+
+<tr class="flight-row" data-flight="UK452" data-airline="Vistara" data-from="Delhi" data-to="Ahmedabad" data-date="20-Oct-2025" data-time="15:00" data-price="4300">
+  <td>UK452</td><td>Vistara</td><td>Delhi</td><td>Ahmedabad</td><td>20-Oct-2025</td><td>15:00</td><td>16:40</td><td>1h 40m</td><td>4,300</td>
+</tr>
+
+<tr class="flight-row" data-flight="SG533" data-airline="SpiceJet" data-from="Lucknow" data-to="Mumbai" data-date="20-Oct-2025" data-time="16:30" data-price="5100">
+  <td>SG533</td><td>SpiceJet</td><td>Lucknow</td><td>Mumbai</td><td>20-Oct-2025</td><td>16:30</td><td>18:40</td><td>2h 10m</td><td>5,100</td>
+</tr>
+
+<tr class="flight-row" data-flight="G8654" data-airline="Go First" data-from="Indore" data-to="Delhi" data-date="20-Oct-2025" data-time="17:10" data-price="3800">
+  <td>G8654</td><td>Go First</td><td>Indore</td><td>Delhi</td><td>20-Oct-2025</td><td>17:10</td><td>18:40</td><td>1h 30m</td>><td>3,800</td>
+</tr>
+
+<tr class="flight-row" data-flight="AI333" data-airline="Air India" data-from="Delhi" data-to="Goa" data-date="20-Oct-2025" data-time="18:30" data-price="7400">
+  <td>AI333</td><td>Air India</td><td>Delhi</td><td>Goa</td><td>20-Oct-2025</td><td>18:30</td><td>21:00</td><td>2h 30m</td><td>7,400</td>
+</tr>
+
+<tr class="flight-row" data-flight="6E317" data-airline="IndiGo" data-from="Chennai" data-to="Delhi" data-date="20-Oct-2025" data-time="19:00" data-price="5900">
+  <td>6E317</td><td>IndiGo</td><td>Chennai</td><td>Delhi</td><td>20-Oct-2025</td><td>19:00</td><td>21:10</td><td>2h 10m</td><td>5,900</td>
+</tr>
+
+<tr class="flight-row" data-flight="UK501" data-airline="Vistara" data-from="Bangalore" data-to="Delhi" data-date="20-Oct-2025" data-time="20:45" data-price="6900">
+  <td>UK501</td><td>Vistara</td><td>Bangalore</td><td>Delhi</td><td>20-Oct-2025</td><td>20:45</td><td>23:00</td><td>2h 15m</td><td>6,900</td>
+</tr>
+
+<tr class="flight-row" data-flight="SG618" data-airline="SpiceJet" data-from="Patna" data-to="Kolkata" data-date="20-Oct-2025" data-time="21:15" data-price="3300">
+  <td>SG618</td><td>SpiceJet</td><td>Patna</td><td>Kolkata</td><td>20-Oct-2025</td><td>21:15</td><td>22:30</td><td>1h 15m</td><td>3,300</td>  
+</tr>
+
+<tr class="flight-row" data-flight="G8799" data-airline="Go First" data-from="Ranchi" data-to="Delhi" data-date="20-Oct-2025" data-time="22:00" data-price="5500">
+  <td>G8799</td><td>Go First</td><td>Ranchi</td><td>Delhi</td><td>20-Oct-2025</td><td>22:00</td><td>00:10</td><td>2h 10m</td><td>5,500</td>
+</tr>
+
+</tbody>
+
+  </table>
+</section>
+<script src="flight-details.js"></script>
+
+</body>
+</html>

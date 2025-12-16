@@ -12,13 +12,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
+
+
 <body>
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
 
         <!-- 🔹 SIGN IN FORM (CONNECTED) -->
-        <form class="sign-in-form" onsubmit="return loginUser()">
+        <form class="sign-in-form"  id="loginForm">
           <h2 class="title">Sign in</h2>
 
           <div class="input-field">
@@ -42,23 +44,9 @@
           </div>
         </form>
 
-        <script>
-function loginUser() {
-  let user = document.getElementById("username").value;
-  let pass = document.getElementById("password").value;
-
-  if (user === "admin" && pass === "1234") {
-    localStorage.setItem("isLoggedIn", "true");
-    window.location.href = "main.html";
-  } else {
-    alert("Invalid Login");
-  }
-  return false;
-}
-</script>
-
-        <!-- 🔹 SIGN UP FORM (UNCHANGED UI) -->
-        <form class="sign-up-form">
+        
+      
+        <form class="sign-up-form" >
           <h2 class="title">Sign up</h2>
 
           <div class="input-field">
@@ -90,7 +78,7 @@ function loginUser() {
       </div>
     </div>
 
-    <!-- 🔹 PANELS -->
+   
     <div class="panels-container">
       <div class="panel left-panel">
         <div class="content">
@@ -112,21 +100,7 @@ function loginUser() {
     </div>
   </div>
 
-  <!-- 🔹 LOGIN LOGIC -->
-  <script>
-    function loginUser() {
-      let user = document.getElementById("username").value;
-      let pass = document.getElementById("password").value;
-
-      if (user === "admin" && pass === "1234") {
-        window.location.href = "index.html"; // main website page
-        return false;
-      } else {
-        alert("Invalid login!");
-        return false;
-      }
-    }
-  </script>
+  
 
   <script src="flight.js"></script>
 </body>

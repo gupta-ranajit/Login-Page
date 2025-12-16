@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Ticket | SKYFLICK</title>
+  <link rel="stylesheet" href="ticket.css">
+</head>
+<body>
+
+<div class="ticket">
+
+  <!-- Company Name -->
+  <div class="company">SKYFLICK</div>
+
+  <!-- Watermark -->
+  <div class="watermark">SKYFLICK</div>
+
+  <!-- Ticket Header -->
+  <div class="ticket-header">
+    <h2>Boarding Pass</h2>
+    <span class="status">CONFIRMED</span>
+  </div>
+
+  <!-- Passenger Info -->
+  <div class="section">
+    <h3>Passenger Details</h3>
+    <div class="row">
+      <div><strong>Name:</strong> <span id="tName"></span></div>
+      <div><strong>Gender:</strong> <span id="tGender"></span></div>
+      <div><strong>Nationality:</strong> <span id="tNationality"></span></div>
+    </div>
+
+  <!-- Flight Info -->
+  <div class="section">
+    <h3>Flight Details</h3>
+    <div class="row">
+      <div><strong>Flight No:</strong> <span id="tFlight"></span></div>
+      <div><strong>Airline:</strong> <span id="tAirline"></span></div>
+      <div><strong>Date:</strong> <span id="tDate"></span></div>
+    </div>
+
+    <div class="row">
+      <div><strong>From:</strong> <span id="tFrom"></span></div>
+      <div><strong>To:</strong> <span id="tTo"></span></div>
+      <div><strong>Duration:</strong> <span id="tDuration"></span></div>
+    </div>
+
+    <div class="row">
+      <div><strong>Departure:</strong> <span id="tDeparture"></span></div>
+      <div><strong>Arrival:</strong> <span id="tArrival"></span></div>
+      <div><strong>Seat:</strong> <span id="tSeat"></span></div>
+    </div>
+  </div>
+
+  <div class="row">
+  <div><strong>Trip:</strong> <span id="tTrip"></span></div>
+  <div><strong>Class:</strong> <span id="tClass"></span></div>
+</div>
+
+
+  <!-- Payment -->
+  <div class="section">
+    <h3>Payment</h3>
+    <div class="row">
+      <div><strong>Method:</strong> <span id="tPayment"></span></div>
+      <div><strong>Fare:</strong> <span id="tFare"></span></div>
+      <div><strong>Status:</strong> <span id="tStatus"></span></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Please arrive at the airport at least 2 hours before departure.
+  </div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="ticket.js"></script>
+
+
+
+<button id="downloadBtn" class="download-btn">
+  Download Ticket (PDF)
+</button>
+
+</body>
+</html>
