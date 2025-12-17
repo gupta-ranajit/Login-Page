@@ -13,20 +13,7 @@
    
 
 <!--<h1>Welcome to Main Page</h1>-->
-  <button onclick="logout()">Logout</button>
-
-  <script>
-    // Protect page
-    if (localStorage.getItem("isLoggedIn") !== "true") {
-      window.location.href = "login.html";
-    }
-
-    function logout() {
-      localStorage.removeItem("isLoggedIn");
-      window.location.href = "login.html";
-    }
-  </script>
-
+  <!--<button onclick="logout()">Logout</button>-->
 
     <header>
         <div class="navbar">
@@ -34,7 +21,9 @@
             <div class="menu">
                 <a  href="#"><i class="fa-solid fa-suitcase"></i>   Travel </a>
                 <a  href="#"><i class="fa-solid fa-earth-americas"></i> Explore </a>
-                <a  href="#"><i class="fa-solid fa-hotel"></i> Hotels </a>
+                <a href="#" id="hotelsLink">
+                  <i class="fa-solid fa-hotel"></i> Hotels
+                    </a>
                 <a  href="#"><i class="fa-solid fa-bus"></i> Buses </a>
                 <a  href="#"><i class="fa-solid fa-taxi"></i> Cabs </a>
             </div>
@@ -46,6 +35,7 @@
     </header>
 
         <section class="hero">
+            <img src="images/aero3.jpg" class="hero-bg" >
             <h1>Enjoy Flight"s With Us</h1>
          </section>
         <div class="search-container">

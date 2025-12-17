@@ -1,6 +1,7 @@
 body {
   background: #eaf4ff;
   font-family: Arial, sans-serif;
+  color: #333; /* Set default text color to dark gray */
 }
 
 .ticket {

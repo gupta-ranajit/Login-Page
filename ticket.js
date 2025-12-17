@@ -5,7 +5,14 @@ console.log("Ticket Loaded Successfully");
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const ticketData = JSON.parse(sessionStorage.getItem("ticketData"));
+  const ticketKey = sessionStorage.getItem("ticketKey");
+  if (!ticketKey) {
+    alert("No ticket key found!");
+    return;
+  }
+
+  const ticketData = JSON.parse(localStorage.getItem(ticketKey));
+  console.log("Retrieved ticket data:", ticketData);
 
   if (!ticketData) {
     alert("No ticket data found!");

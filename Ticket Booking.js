@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const loggedInUser = sessionStorage.getItem("loggedInUser");
+  if (!loggedInUser) {
+    alert("Please login to book a ticket.");
+    window.location.href = "login.html";
+    return;
+  }
 
   // Get flight data
   const flightData = JSON.parse(sessionStorage.getItem("selectedFlight"));
@@ -55,10 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       seat: generateSeat(),
       payment: paymentInput.value,
-      status: "CONFIRMED"
+      status: "CONFIRMED",
+      bookedBy: loggedInUser,
     };
 
-    sessionStorage.setItem("ticketData", JSON.stringify(ticketData));
+    const ticketKey = `ticket_${loggedInUser}_${Date.now()}`;
+    localStorage.setItem(ticketKey, JSON.stringify(ticketData));
+    sessionStorage.setItem("ticketKey", ticketKey); // Pass key to ticket page
     window.location.href = "ticket.html";
   });
 });

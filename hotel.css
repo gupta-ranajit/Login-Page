@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f2f4f8;
+}
+
+.header {
+  background: #fff;
+  padding: 12px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #056d86;
+}
+
+.logo span {
+  color: #008cff;
+}
+
+.nav a {
+  margin: 0 14px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav a.active {
+  color: #008cff;
+  border-bottom: 2px solid #008cff;
+  padding-bottom: 4px;
+}
+
+.login-btn {
+  background: #008cff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.search-box {
+  background: #fff;
+  margin: 30px auto;
+  width: 60%;
+  display: flex;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.search-box button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background: #008cff;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.offers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.offer-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.offer-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.offer-card h3 {
+  margin: 12px 0 6px;
+}
+
+.offer-card p {
+  color: #555;
+  font-size: 14px;
+}
+
+.offer-card button {
+  margin-top: 10px;
+  background: #008cff;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.offers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.offer-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.offer-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* 🔥 Hover Effects */
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.offer-card:hover img {
+  transform: scale(1.1);
+}
+
+.offer-card h3 {
+  margin: 12px;
+}
+
+.offer-card p {
+  margin: 0 12px 12px;
+  color: #555;
+}
+
+.offer-card button {
+  margin: 0 12px 16px;
+  padding: 8px 14px;
+  border: none;
+  background: #008cff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.offer-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 0 2px #7464647c,        /* light grey glowing border */
+    0 10px 25px rgba(0,0,0,0.2);
+}
+
+.offer-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.offer-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ================= TRAIN BOOKING SECTION ================= */
+
+.train-section {
+  margin-top: 60px;
+  padding: 40px;
+  background: #f7f9fc;
+}
+
+.section-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.train-offers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.train-card {
+  background: #fff;
+  border-radius: 14px;
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.train-card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.train-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 2px #e0e0e0,
+    0 10px 25px rgba(0,0,0,0.2);
+}
+
+.train-content small {
+  font-size: 11px;
+  color: #777;
+}
+
+.train-content h3 {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.train-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+.train-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #008cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.train-hero {
+  display: flex;
+  flex-direction: column;  /* Stack h1 and p vertically */
+  justify-content: center; /* Vertical alignment */
+  align-items: center;     /* Horizontal alignment */
+  text-align: center;      /* Center text inside elements */
+  height: 10px;           /* Adjust height as needed */
+  background-color: #f0f0f0; /* Optional background */
+}
+
+/* Card base */
+.train-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+/* Image styling */
+.train-card img {
+  width: 50%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effects */
+.train-card:hover {
+  box-shadow: 0 0 20px rgba(128, 128, 128, 0.6); /* grey glow */
+  transform: translateY(-5px);
+}
+
+/* Image zoom on hover */
+.train-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Content padding */
+.train-content {
+  padding: 15px;
+}
+
+/* Button styling */
+.train-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #0a5cff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.train-btn:hover {
+  background: #0846c7;
+}
+
+
