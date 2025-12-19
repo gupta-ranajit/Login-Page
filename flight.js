@@ -74,3 +74,49 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+import { db } from "./firebase.js";
+import { collection, getDocs } from
+  "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const flightList = document.getElementById("flightList");
+
+const querySnapshot = await getDocs(collection(db, "flights"));
+
+querySnapshot.forEach(doc => {
+  const flight = doc.data();
+
+  flightList.innerHTML += `
+    <div class="flight-card">
+      <h3>${flight.airline}</h3>
+      <p>${flight.from} → ${flight.to}</p>
+      <p>₹${flight.price}</p>
+      <button onclick="selectFlight('${doc.id}')">Book</button>
+    </div>
+  `;
+});
+
+window.selectFlight = (id) => {
+  sessionStorage.setItem("flightId", id);
+  window.location.href = "Ticket Booking.html";
+};
+
+import { db, auth } from "./firebase.js";
+import { addDoc, collection, serverTimestamp } from
+  "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+document.getElementById("bookingForm").addEventListener("submit", async e => {
+  e.preventDefault();
+
+  const booking = {
+    userId: auth.currentUser.uid,
+    flightId: sessionStorage.getItem("flightId"),
+    passengerName: name.value,
+    email: email.value,
+    status: "CONFIRMED",
+    createdAt: serverTimestamp()
+  };
+
+  await addDoc(collection(db, "bookings"), booking);
+  window.location.href = "ticket.html";
+});
